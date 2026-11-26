@@ -138,9 +138,17 @@ class InteractionState:
         self.image_panning = False
         self.presentation = PresentationState()
 
-        # Built-in lesson slides and per-slide annotations.
+        # Built-in lesson slides; fall back to one slide if the asset is missing.
         lesson_path = self.config_path.parent / "assets" / "lessons" / "slides.json"
-        self.slides = json.loads(lesson_path.read_text(encoding="utf-8"))
+        if lesson_path.is_file():
+            self.slides = json.loads(lesson_path.read_text(encoding="utf-8"))
+        else:
+            self.slides = [{
+                "title": "How the Smart Board Sees",
+                "subtitle": "Camera, detection and projection",
+                "body": ["Find the pointer", "Map it to the board", "Draw and interact"],
+                "diagram": "homography",
+            }]
         self.slide_index = 0
         self.slide_annotations: list[list[Stroke]] = [[] for _ in self.slides]
 
@@ -271,7 +279,7 @@ class InteractionState:
             cards = [
                 ("draw", "Draw", "Free ink, colors and eraser"),
                 ("images", "Images", "Import, zoom and pan"),
-                ("presentation", "PowerPoint", "Slides + separate live ink"),
+                ("presentation", "Lesson", "Slides + separate live ink"),
                 ("objects", "Objects", "Grab, move and transform"),
                 ("settings", "Settings", "Camera, pointer and remote"),
                 ("calibrate", "Calibrate", "Four-corner board mapping"),

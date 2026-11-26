@@ -163,7 +163,7 @@ class Renderer:
 
     def _page(self, image, state) -> None:
         """Render the shared page header and current status bar."""
-        titles = {"draw": "Free Drawing", "images": "Image Viewer", "presentation": "PowerPoint Studio",
+        titles = {"draw": "Free Drawing", "images": "Image Viewer", "presentation": "Lesson Presentation",
                 "lesson": "Interactive Mini-Lesson", "objects": "Object Playground", "settings": "Settings"}
         put_text(image, titles.get(state.mode, state.mode.title()), (25, 93), 0.62, NAVY, 2)
         if state.mode == "draw":
@@ -225,7 +225,7 @@ class Renderer:
         deck = state.presentation
         if not deck.slides:
             self._canvas(image, (245, 247, 250))
-            put_text(image, "IMPORT YOUR POWERPOINT", (480, 275), 0.85, NAVY, 2)
+            put_text(image, "IMPORT YOUR POWERPOINT FILE", (480, 275), 0.85, NAVY, 2)
             put_text(image, "Choose + Import PPTX. LibreOffice converts it in the background.", (390, 325), 0.57, MUTED)
             put_text(image, "Then use thumbnails, Previous / Next, Present and live pinch ink.", (405, 365), 0.55, MUTED)
             put_text(image, "Your camera tracking stays responsive during conversion.", (440, 405), 0.50, TEAL)

@@ -23,11 +23,15 @@ The default source is **Synthetic**, so the interface can be tested immediately 
 3. Use **Zoom +**, **Zoom -**, the mouse wheel, **2x close-up**, **Pan**, and **Fit / Reset View**.
 4. Images retain their original aspect ratio at every zoom level. Right-click resets the view.
 
+<<<<<<< HEAD
 ## Lesson presentation
+=======
+## Lesson Studio
+>>>>>>> 5f8d4ea (Update)
 
 PowerPoint import requires [LibreOffice](https://www.libreoffice.org/download/) installed with its `soffice` command available. On macOS the app also checks `/Applications/LibreOffice.app/Contents/MacOS/soffice`.
 
-1. Open **PowerPoint → + Import PPTX** and select a `.ppt` or `.pptx` file.
+1. Open **Lesson → + Import PPTX** and select a `.ppt` or `.pptx` file.
 2. LibreOffice converts it to PDF in an isolated background process; PyMuPDF renders the actual pages. `python-pptx` is not used for rendering.
 3. Select a thumbnail or use **Previous slide / Next slide**. Long decks have paged thumbnails.
 4. Choose **PRESENT FULLSCREEN** for a distraction-free slide view. Press **Escape** or **EXIT** to return without losing the deck.

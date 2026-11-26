@@ -1,0 +1,26 @@
+[
+  {
+    "title": "How a Camera Becomes a Mouse",
+    "subtitle": "Smart Interactive Whiteboard — four-step mini-lesson",
+    "body": ["A fixed camera observes the projected board.", "A bright pointer supplies a reliable image position.", "Remote buttons provide discrete left and right clicks."],
+    "diagram": "pipeline"
+  },
+  {
+    "title": "1. Find the Pointer",
+    "subtitle": "Color conversion, thresholding, and connected components",
+    "body": ["Convert BGR pixels to HSV with NumPy.", "Threshold color, remove speckles, then fill small holes.", "Use the largest blob centroid as the measured position."],
+    "diagram": "blob"
+  },
+  {
+    "title": "2. Map Camera to Board",
+    "subtitle": "Four corners determine a 3 × 3 homography",
+    "body": ["Click board corners: TL, TR, BR, BL.", "Normalized DLT solves H with singular-value decomposition.", "Perspective division maps (u, v) into board pixels (X, Y)."],
+    "diagram": "homography"
+  },
+  {
+    "title": "3. Interact and Annotate",
+    "subtitle": "Stable motion plus explicit click events",
+    "body": ["Adaptive smoothing rejects jitter and isolated jumps.", "Next generates a left click; Previous generates a right click.", "Try drawing here: annotations are stored on this slide."],
+    "diagram": "interaction"
+  }
+]
