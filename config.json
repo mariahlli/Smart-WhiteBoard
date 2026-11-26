@@ -1,0 +1,30 @@
+{
+  "camera_index": 0,
+  "mirror": true,
+  "flip_vertical": false,
+  "detection_mode": "hand",
+  "hsv_lower": [
+    178,
+    124,
+    25
+  ],
+  "hsv_upper": [
+    26,
+    255,
+    255
+  ],
+  "min_area": 45,
+  "board_width": 1280,
+  "board_height": 720,
+  "remote_left_keys": [
+    "down",
+    "page_down",
+    "right"
+  ],
+  "remote_right_keys": [
+    "left",
+    "page_up",
+    "up"
+  ],
+  "calibration": null
+}

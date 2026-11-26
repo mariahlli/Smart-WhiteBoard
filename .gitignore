@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+assets/imports/
+remote_keycodes.log
+tools/
+tests/
+demo_screenshots/
+assets/lessons/
