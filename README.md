@@ -68,21 +68,9 @@ Missing LibreOffice, invalid images, corrupt decks, conversion failures, and emp
 
 Color swatches in the Draw menu identify each pen, and the presentation **INK** control shows its selected color.
 
-## Verification
-
-```bash
-.venv/bin/python -m pytest -q
-.venv/bin/python main.py --synthetic --smoke-test --no-remote
-.venv/bin/python tools/capture_demo.py
-.venv/bin/python tools/benchmark_metrics.py
-```
-
-`benchmark_metrics.json` contains measured performance and calibration data. `REPORT_DATA_AND_GUIDE.md` provides the mathematical explanation and report-ready structure.
 
 ## Project map
 
 - `core/`: camera, MediaPipe hand tracking, NumPy marker vision, calibration, asynchronous imports, remote input.
 - `ui/`: aspect-correct NumPy primitives, pixel renderer, interaction state machine.
-- `assets/`: educational images, mini-lesson, and workspace-local imported files.
-- `tests/`: numerical, worker, image, PDF, presentation, annotation, and GUI workflow tests.
-- `tools/`: asset generation, screenshots, and benchmarks.
+
