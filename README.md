@@ -16,13 +16,22 @@ python -m venv .venv
 
 The default source is **Synthetic**, so the interface can be tested immediately without hardware. Move the mouse to take temporary control in synthetic mode.
 
+## Drawing
+
+Open **Draw** from the home screen to write or sketch on the board. Select a red, blue, green, or black pen from the left menu; the color swatches show the available ink. **Thickness** cycles through 3, 5, and 9 pixels. **Eraser** uses a wider stroke to remove ink.
+
+- In **Toggle** mode, click or pinch once to start a stroke and again to stop.
+- In **Hold** mode, hold the click/pinch while moving to draw; releasing ends the stroke.
+- Use **Undo stroke** to remove the most recent stroke, or **Clear canvas** to erase all drawing from the current canvas.
+
+The hand cursor follows the index finger, and pinching thumb and index finger clicks. Mouse clicks also work; in synthetic mode, mouse movement temporarily controls the pointer. The drawing tools are available alongside imported slides, where annotations stay separate for each slide.
+
 ## Image Viewer
 
 1. Open **Images → + Import Image** and select a PNG, JPG, or JPEG.
 2. The file is copied into the project and decoded on a worker thread.
 3. Use **Zoom +**, **Zoom -**, the mouse wheel, **2x close-up**, **Pan**, and **Fit / Reset View**.
 4. Images retain their original aspect ratio at every zoom level. Right-click resets the view.
-
 
 ## Lesson presentation
 
@@ -57,7 +66,7 @@ Missing LibreOffice, invalid images, corrupt decks, conversion failures, and emp
 | Escape during presentation | Exit presentation, preserving slides and annotations |
 | `Q` / Escape elsewhere | Quit |
 
-The current ink swatch and line-thickness preview are always visible in Draw; color buttons and the presentation **INK** control show their selected color directly.
+Color swatches in the Draw menu identify each pen, and the presentation **INK** control shows its selected color.
 
 ## Verification
 
