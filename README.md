@@ -23,11 +23,8 @@ The default source is **Synthetic**, so the interface can be tested immediately 
 3. Use **Zoom +**, **Zoom -**, the mouse wheel, **2x close-up**, **Pan**, and **Fit / Reset View**.
 4. Images retain their original aspect ratio at every zoom level. Right-click resets the view.
 
-<<<<<<< HEAD
+
 ## Lesson presentation
-=======
-## Lesson Studio
->>>>>>> 5f8d4ea (Update)
 
 PowerPoint import requires [LibreOffice](https://www.libreoffice.org/download/) installed with its `soffice` command available. On macOS the app also checks `/Applications/LibreOffice.app/Contents/MacOS/soffice`.
 
