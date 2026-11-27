@@ -203,8 +203,7 @@ class Renderer:
             put_text(image, "Click in the canvas to start ink. Move the pointer. Click again to stop.", (430, 365), 0.60, MUTED)
             put_text(image, "Right-click = undo  |  Hold mode is available in the left menu", (500, 400), 0.5, MUTED)
         if state.drawing:
-            put_text(image, "INK ACTIVE", (1040, 183), 0.48, (50, 150, 90), 2)
-
+            put_text(image, "INK ACTIVE", (1100, 90), 0.48, state.pen_color, 2)
     def _images(self, image, state) -> None:
         """Render the selected imported image with zoom, pan, and fit controls."""
         self._canvas(image, (250, 250, 250))
